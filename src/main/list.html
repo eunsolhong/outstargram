@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/list.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="app">
+    <header>
+        <div>
+            <h1><i class="fa fa-camera-retro"></i></h1>
+        </div>
+        <div>
+        <img :src="product.image">
+        </div>
+        <div>
+        <h1><i class="fa fa-paper-plane"></i></h1>
+        </div>
+    </header>
+    <hr>
+    <main>
+        <div id="list">
+
+        </div>
+
+
+
+    </main>
+
+
+</div>
+<script type="text/javascript">
+    var webstore = new Vue({
+        el: '#app',
+        data: {
+            product: {
+                image: "../assets/img/logo.png"
+            }
+        }
+    });
+</script>
+</body>
+</html>
