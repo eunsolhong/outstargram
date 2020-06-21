@@ -2,47 +2,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>list</title>
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/list.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div id="app">
     <header>
-        <div>
-            <h1><i class="fa fa-camera-retro"></i></h1>
-        </div>
-        <div>
-        <img :src="product.image">
-        </div>
-        <div>
-        <h1><i class="fa fa-paper-plane"></i></h1>
-        </div>
+        <nav id="listForm">
+            <div class="display_container">
+            <div class="logo_left">
+                <h2><i class="fa fa-camera-retro"></i></h2>
+            </div>
+            <div class="logo_center">
+                <img :src="title.image">
+            </div>
+            <div class="logo_right">
+                <h2><i class="fa fa-paper-plane"></i></h2>
+            </div>
+            </div>
+        </nav>
     </header>
-    <hr>
     <main>
-        <div id="list">
+        <div id="main">
+            <form>
+                <div class="id">
+                    <img :src= "header.image">
+                    <p>wendywendydiary</p>
+                    <i class="fa fa-ellipsis-h"></i>
+                </div>
+
+        <div id="feed_img_carousel" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../assets/img/33.jpeg" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/img/22.jpeg" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/img/wendy.JPG" width="1100" height="500">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
 
         </div>
-
-
-
+            </form>
+        </div>
     </main>
 
 
-</div>
+    <div class="icon_container">
+        <div class="left">
+            <a id="heart" @click.stop="click_heart"><i class="fa fa-heart"></i></a>
+            <i class="fa fa-comment"></i>
+            <i class="fa fa-paper-plane"></i>
+        </div>
+        <div class="right">
+            <i class="fa fa-bookmark"></i>
+        </div>
+    </div>
+
+
+
+
+
 <script type="text/javascript">
-    var webstore = new Vue({
-        el: '#app',
+    var listForm = new Vue({
+        el: '#listForm',
         data: {
-            product: {
+            title: {
                 image: "../assets/img/logo.png"
+            },
+            header: {
+                image: "../assets/img/insta.png"
+            }
+        },
+        methods: {
+            click_heart: function () {
+                alert("하트");
             }
         }
     });
 </script>
+
 </body>
 </html>

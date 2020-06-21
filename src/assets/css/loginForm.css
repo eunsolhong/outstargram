@@ -1,10 +1,9 @@
 header img {
-    width: 48%;
+    width: 30%;
     height: 10%;
-    display: block;
-    margin-top: 11%;
-    margin-left: 26%;
-    margin-bottom: 6%;
+    display: flex;
+    margin: 0 auto;
+
 }
 
 input.form-control {
@@ -15,13 +14,17 @@ input.form-control {
     border-radius: 12px;
 }
 
-.btn {
+.loginForm {
+    text-align: center;
+}
+
+.submit_button {
     width: 80%;
     height: 85px;
-    font-size: 60px;
+    font-size: 14px;
     margin-left: 10%;
     background-color: #A9D0F5;
-    border-radius: 12px !important;
+    border-radius: 12px;
 }
 
 .line {
@@ -29,6 +32,7 @@ input.form-control {
     margin: 0;
     padding: 0;
     text-align: center;
+    font-size: 15px;
 }
 
 .line:after {
@@ -51,25 +55,29 @@ input.form-control {
     width: 310px;
 }
 
-h1 {
-    text-align: center;
+.login_container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
-h2 {
-    text-align: center;
-    color: #424242;
+a {
+    text-decoration: none !important;
 }
 
-footer {
-    margin-top:30%;
-   color: #848484;
+a:hover {
+    text-decoration: none;
 }
 
-h2.white{
-    color: #FFFFFF;
+strong {
+    color: skyblue;
 }
 
-.blue {
-    background-color: #2E9AFE;
-    border-radius: 12px !important;
+p {
+    font-size: 30px;
+    color: #8E8E8E;
+}
+
+.footer {
+    margin-top: auto;
 }

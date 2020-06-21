@@ -1,6 +1,45 @@
+h2 {
+    display: inline;
+}
+
+
 header img {
-    width: 300px;
-    height: 110px;
-    display: block;
-    margin: 0 auto;
+    width: 50%;
+    height: 10%;
+    display: inline;
+    margin-bottom: 3%;
+    margin-left: 25%;
+}
+
+.carousel-inner img {
+    width: 50%;
+    height: 50%;
+}
+
+nav {
+   border-bottom: 1px solid black;
+}
+
+.display_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 2rem;
+    align-items: center;
+}
+
+.main img {
+    width: 20%;
+    height: 10%;
+}
+
+.icon_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem;
+    align-items: flex-end;
+
+}
+
+.icon_container i {
+    font-size : 2.5rem;
 }
